@@ -1063,6 +1063,12 @@ template {
   .slider {
     height: 250px;
   }
+  .hotel {
+    padding-top: 0;
+  }
+  .hotel-info {
+    padding-bottom: 18px;
+  }
   .hotel__slider {
     margin-bottom: 20px;
   }
