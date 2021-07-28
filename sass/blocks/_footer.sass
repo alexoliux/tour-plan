@@ -9,6 +9,7 @@
         grid-gap: 20px
         grid-auto-rows: minmax(83px, min-content)
         align-items: start
+
     &__logo
         width: 166px
         grid-row: 1 / 3
@@ -32,6 +33,7 @@
         grid-column: span 2
     &__contact-form
         grid-column: span 2
+        margin-bottom: 95px
 
     &__form
         display: flex
@@ -87,6 +89,7 @@
         padding: 18px 23px
         border: none
         width: 100%
+        margin-bottom: 22px
     &__button
         min-width: 160px
         min-height: 50px
@@ -101,9 +104,20 @@
         line-height: 15px
         color: $light
         margin-right: 282px
+
     &__info
         font-style: normal
         font-weight: bold
         font-size: 12px
         line-height: 15px
         color: $footer-text-color
+    &__bottom
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        &-texts
+            margin-right: 277px
+        &-item
+            margin-right: 20px
+            text-decoration: none
+            color: $light

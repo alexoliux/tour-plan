@@ -721,6 +721,7 @@ img {
 
 .footer__contact-form {
   grid-column: span 2;
+  margin-bottom: 95px;
 }
 
 .footer__form {
@@ -797,6 +798,7 @@ img {
   padding: 18px 23px;
   border: none;
   width: 100%;
+  margin-bottom: 22px;
 }
 
 .footer__button {
@@ -821,6 +823,22 @@ img {
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__bottom-texts {
+  margin-right: 277px;
+}
+
+.footer__bottom-item {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
