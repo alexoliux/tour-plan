@@ -1,4 +1,5 @@
-const hotelSlider = new Swiper('.hotel-slider', {
+$(document).ready(function () {
+  const hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
 
@@ -12,23 +13,59 @@ const hotelSlider = new Swiper('.hotel-slider', {
     onlyInViewport: false,
   }
 });
-const reviwsSlider = new Swiper('.reviews-slider', {
-  // Optional parameters
-  loop: true,
+  const reviwsSlider = new Swiper('.reviews-slider', {
+    // Optional parameters
+    loop: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.reviews-slider__button--next',
-    prevEl: '.reviews-slider__button--prev',
-  },
-  keyboard:{
-    enabled:true,
-    onlyInViewport: false,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.reviews-slider__button--next',
+      prevEl: '.reviews-slider__button--prev',
+    },
+    keyboard:{
+      enabled:true,
+      onlyInViewport: false,
+    }
+  });
+
+  var menuButton = $(".menu-button");
+  menuButton.on("click", function (){
+    $('.navbar-bottom').toggleClass('navbar-bottom--visible');
+  });
+
+  var modalButton = $("[data-toggle=modal]"); 
+  var closeModalButton = $('.modal__close'); 
+  modalButton.on("click", openModal);
+  closeModalButton.on("click" , closeModal)
+  var modalOverlay = $(".modal__overlay");
+  var modalDialog = $(".modal__dialog");
+
+  function openModal(){
+    var targetModal = $(this).attr('data-href');
+    $(targetModal).find(".modal__overlay").addClass('modal__overlay--visible');
+    $(targetModal).find(".modal__dialog").addClass('modal__dialog--visible');
   }
-});
+  
+  
+ 
 
-var menuButton = document.querySelector(".menu-button");
-menuButton.addEventListener("click", function (){
-  console.log("Rkbr");
-  document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible');
-})
+
+  function closeModal(event){
+    event.preventDefault()
+    var modalDialog = $(".modal__dialog");
+    var modalOverlay = $(".modal__overlay");
+    modalOverlay.removeClass("modal__overlay--visible");
+    modalDialog.removeClass("modal__dialog--visible");
+  
+  }
+  // Закрытие по клавише Esc.
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+      
+			e.stopPropagation();
+			modalOverlay.removeClass("modal__overlay--visible");
+      modalDialog.removeClass("modal__dialog--visible");
+		}
+	});
+  
+});
