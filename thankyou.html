@@ -101,9 +101,9 @@
             <div class="hotel-info">
                 <div class="hotel-info__text">
                    <div class="hotel-wrapper">
-                        <h1 class="hotel-name hotel-info__name">Thnak you</h1>
+                        <h1 class="hotel-name hotel-info__name">Thank you</h1>
                    </div>
-                    <p class="hotel-description hotel-info__description">Наш менеджер перезвонгит </p>
+                    <p class="hotel-description hotel-info__description">Наш менеджер перезвонит </p>
                 </div>
                 <!-- /.hotel-info__text -->
             </div>
@@ -190,11 +190,16 @@
                 </div>
                 <!-- /.footer__contact-details -->
                 <div class="footer__contact-form">
-                    <h3 class="footer__title  footer__title--mb-3">Send us a message</h3>
-                    <form action="send.php" method="POST" class="footer__form">
-                        <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-                        <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
-                        <textarea class="footer__message" cols="30" rows="10" placeholder="Message"
+                    <h3 class="footer__title  footer__title--mb-3">booking</h3>
+                    <form action="send.php" method="POST" class="footer__form form">
+                        <div class="footer__input-group">
+                            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name"
+                                required>
+                        </div>
+                        <div class="footer__input-group">
+                            <input type="tel" class="input footer__input" placeholder="Phone Number*" name="phone" required>
+                        </div>
+                        <textarea class="message footer__message" cols="30" rows="10" placeholder="Message"
                             name="message"></textarea>
                         <button class="button footer__button" type="submit">Send</button>
                         <span class="footer__info">*Required Fields</span>

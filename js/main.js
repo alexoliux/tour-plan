@@ -67,5 +67,23 @@ $(document).ready(function () {
       modalDialog.removeClass("modal__dialog--visible");
 		}
 	});
-  
+  //  Обработка форм
+  $('.form').each(function (){
+    $(this).validate({
+    errorClass: "invalid",
+    messages: {
+    name: {
+      required: "Укажите имя",
+      minlength: "Имя должно быть не короче 2 букв"
+    },
+    email: {
+      required: "Укажите email",
+      email: "email name@domain.com"
+    },
+    phone: {
+      required: "Укажите телефон",
+    },
+  }
+  })
+  })
 });

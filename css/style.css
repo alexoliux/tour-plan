@@ -47,6 +47,11 @@ img {
   color: #ffffff;
 }
 
+.invalid {
+  color: #EC1F46;
+  border-bottom: 1px solid #EC1F46;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -812,7 +817,7 @@ img {
   color: inherit;
 }
 
-.footer__input {
+.footer__input-group {
   margin-bottom: 15px;
   flex-basis: 45%;
 }
@@ -906,7 +911,7 @@ img {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__title {
@@ -922,7 +927,11 @@ img {
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1292,7 +1301,7 @@ template {
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
   }
-  .footer__input {
+  .footer__input-group {
     flex-basis: 100%;
   }
   .footer__logo {
@@ -1389,7 +1398,7 @@ template {
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
   }
-  .footer__input {
+  .footer__input-group {
     flex-basis: 45%;
   }
   .footer__logo {
@@ -1556,7 +1565,7 @@ template {
     width: 49%;
     height: 255px;
   }
-  .footer__input {
+  .footer__input-group {
     flex-basis: 100%;
   }
 }
